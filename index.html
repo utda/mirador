@@ -66,6 +66,13 @@
         }
       }
 
+      var workspaceControlPanel = {}
+      if(vars["bottomPanel"]){
+        workspaceControlPanel = {
+          enabled: false,
+        }
+      }
+
       var miradorInstance = Mirador.viewer({
         id: "mirador",
         language : "ja",
@@ -75,6 +82,7 @@
         },
         window : windowSettings,
         windows,
+        workspaceControlPanel
       });
     </script>
   </body>
